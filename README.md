@@ -36,5 +36,8 @@ I am hosting both the web application and the minecraft server locally, accessib
 limit who I give the IP address to :)  Judges are welcome, and if you don't have a minecraft account (so you can see
 the action) I have a spare one you can borrow.
 
+(The system requires a user be logged into the server whenever decisions are requested.  Otherwise the redstone won't
+run and the whole thing will time out (default timeout response is "YES"))
+
 
 
