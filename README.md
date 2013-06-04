@@ -5,7 +5,7 @@ Decision engine written in Minecraft
 
 This project was written for the OMGWTF2 contest.  It is a shout-out to all the nephews who write "enterprise"
 software for their uncles, and invariably produce code that's written in the most obtuse way possible.
-
+http://omg2.thedailywtf.com/
 
 
 It works like this:
