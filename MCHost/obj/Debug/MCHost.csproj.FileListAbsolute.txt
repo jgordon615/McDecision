@@ -1,0 +1,5 @@
+D:\Projects\OMGWTF2\MCHost\bin\Debug\MCHost.dll
+D:\Projects\OMGWTF2\MCHost\bin\Debug\MCHost.pdb
+D:\Projects\OMGWTF2\MCHost\obj\Debug\MCHost.dll
+D:\Projects\OMGWTF2\MCHost\obj\Debug\MCHost.pdb
+D:\Projects\OMGWTF2\MCHost\obj\Debug\MCHost.csprojResolveAssemblyReference.cache

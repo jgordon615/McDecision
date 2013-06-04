@@ -2,6 +2,7 @@
 using System.Configuration;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
+using System.Threading;
 
 namespace MCHost
 {
@@ -107,6 +108,10 @@ namespace MCHost
                 _process.StandardInput.Write("/stop\n");
                 _process.OutputDataReceived -= _process_OutputDataReceived;
                 _process.ErrorDataReceived -= _process_ErrorDataReceived;
+
+                Thread.Sleep(4000);
+                _process.Kill();
+
                 _process = null;
             }
         }
