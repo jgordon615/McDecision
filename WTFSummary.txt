@@ -1,0 +1,22 @@
+This should explain all (most?) of the WTFs that there are to find in this solution.
+I'm sure there are more, but such is the nature of software development: unintended behaviors.
+
+1) The Web Host
+	a) Activating the Minecraft server from within IIS itself (Global.asax.cs:ResetHost)
+	b) Sharing the reference for the process using the Application variable (Global.asax.cs:ResetHost, McController.cs:MakeDecision)
+	c) Using a custom-written controller to handle static file content (IndexController.cs)
+	d) Using the windows registry to derive mime types (IndexController.cs:GetMimeType)
+	d) Custom threading in a web application -- Thread.Sleep, Process.Start (Global.asax.cs:ResetHost, McController.cs:MakeDecision)
+	e) Having a better solution than the "current" version commented out in the code (McController.cs:MakeDecision)
+2) Minecraft/Redstone
+	a) Non-enterprisey (but better) solution outside the containment area
+	b) Using weather to facilitate communication between the host -> minecraft
+	c) Using tricks of the dropper+hopper+comparator as a random number generator
+	d) Overcomplicated wiring of redstone latches to prevent both results from firing at once
+	e) Unneccessary pistons and repeaters in the final communication loop
+	f) Dead code in the corners (not used at all in the solution, but left in the "code")
+3) Environmental
+	a) It only works with a player logged into the minecraft server
+	b) If no player is logged in, it answers "YES" always.
+3) Not my WTFs
+	a) When watching the minecraft server (via java) most "normal" messages come through STDERR, not STDOUT
