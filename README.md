@@ -10,7 +10,7 @@ http://omg2.thedailywtf.com/
 
 It works like this:
 
-The ASP.Net MVC 4 application hosts a minecraft (java) process via a static variable in global.asax.cs.  This 
+The ASP.Net MVC 4 application hosts a minecraft (java) process in global.asax.cs.  This 
 variable is shared with the rest of the application using HttpContext.Current.Application[""].
 
 ASP.Net MVC 4 application (with some WTFs of it's own) receives a request for /decision
