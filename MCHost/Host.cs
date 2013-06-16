@@ -12,7 +12,9 @@ namespace MCHost
     /// </summary>
     public class Host : IDisposable
     {
-        private Process _process;
+        private Process _hostProcess;
+        //private Process _clientProcess;
+
         public event EventHandler<bool> DecisionMade;
 
         /// <summary>
@@ -31,13 +33,28 @@ namespace MCHost
             pi.UseShellExecute = false;
             pi.WorkingDirectory = ConfigurationManager.AppSettings["WorkingFolder"];
             
-            _process = Process.Start(pi);
-            _process.OutputDataReceived += _process_OutputDataReceived;
-            _process.BeginOutputReadLine();
+            _hostProcess = Process.Start(pi);
+            _hostProcess.OutputDataReceived += _process_OutputDataReceived;
+            _hostProcess.BeginOutputReadLine();
 
-            _process.ErrorDataReceived += _process_ErrorDataReceived;
-            _process.BeginErrorReadLine();
+            _hostProcess.ErrorDataReceived += _process_ErrorDataReceived;
+            _hostProcess.BeginErrorReadLine();
+
+            Thread.Sleep(2000);
+
+            //pi = new ProcessStartInfo();
+            //pi.FileName = ConfigurationManager.AppSettings["MinecraftExePath"];
+            //pi.Arguments = ConfigurationManager.AppSettings["MinecraftExeArguments"];
+            //pi.UseShellExecute = true;
+            //pi.LoadUserProfile = true;
+
+            //_clientProcess = Process.Start(pi);
         }
+
+        public int HostProcessId { get { return _hostProcess.Id; } }
+        //public int ClientProcessId { get { return _clientProcess.Id; } }
+
+        public bool HasExited { get { return _hostProcess == null || _hostProcess.HasExited; } }
 
         /// <summary>
         /// The minecraft .jar seems to send it's "normal" output to STDERR.  Kindof
@@ -74,8 +91,8 @@ namespace MCHost
         /// </summary>
         public void BeginDecision()
         {
-            _process.StandardInput.Write("/say Oh great STEVEBOT, please tell us the answer...\n");
-            _process.StandardInput.Write("/time set 0\n");
+            _hostProcess.StandardInput.Write("/say Oh great STEVEBOT, please tell us the answer...\n");
+            _hostProcess.StandardInput.Write("/time set 0\n");
         }
 
         /// <summary>
@@ -103,16 +120,22 @@ namespace MCHost
         /// </summary>
         public void Dispose()
         {
-            if (_process != null)
+            //if (_clientProcess != null)
+            //{
+            //    _clientProcess.Kill();
+            //    _clientProcess = null;
+            //}
+
+            if (_hostProcess != null)
             {
-                _process.StandardInput.Write("/stop\n");
-                _process.OutputDataReceived -= _process_OutputDataReceived;
-                _process.ErrorDataReceived -= _process_ErrorDataReceived;
+                _hostProcess.StandardInput.Write("/stop\n");
+                _hostProcess.OutputDataReceived -= _process_OutputDataReceived;
+                _hostProcess.ErrorDataReceived -= _process_ErrorDataReceived;
 
                 Thread.Sleep(4000);
-                _process.Kill();
+                _hostProcess.Kill();
 
-                _process = null;
+                _hostProcess = null;
             }
         }
     }

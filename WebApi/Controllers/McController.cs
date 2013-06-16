@@ -2,6 +2,7 @@
 using System.Web;
 using System.Web.Http;
 using MCHost;
+using WebApi.ViewModels;
 
 namespace WebApi.Controllers
 {
@@ -29,13 +30,19 @@ namespace WebApi.Controllers
         /// </summary>
         /// <returns></returns>
         [AcceptVerbs("GET")]
-        public bool MakeDecision()
+        public DecisionResult MakeDecision()
         {
+            DecisionResult result = new DecisionResult();
             Host host = (Host)HttpContext.Current.Application["host"];
+            if (host.HasExited)
+            {
+                host = MvcApplication.ResetHost();
+            }
             bool? decision = null;
 
             host.DecisionMade += (s, e) => {
                 decision = e;
+                result.ServerResponded = true;
             };
 
             host.BeginDecision();
@@ -47,13 +54,16 @@ namespace WebApi.Controllers
                     // Steve didn't answer, so send the default answer.
                     //decision = new Random().Next(0, 1) == 0;
                     decision = true;
+                    result.ServerResponded = false;
                     break;
                 }
                 duration += 100;
                 Thread.Sleep(100);
             }
 
-            return decision.Value;
+            result.Decision = decision.Value;
+
+            return result;
         }
     }
 }

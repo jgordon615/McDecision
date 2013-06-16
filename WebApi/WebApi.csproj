@@ -149,11 +149,93 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaticRouteHandler.cs" />
+    <Compile Include="ViewModels\DecisionResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Views\images\no.png" />
-    <Content Include="Views\images\yes.png" />
+    <Content Include="Static\css\colorbox.css" />
+    <Content Include="Static\css\decision.css" />
+    <Content Include="Static\images\no.png" />
+    <Content Include="Static\images\yes.png" />
+    <Content Include="Static\scripts\colorbox-master\content\ajax.html" />
+    <Content Include="Static\scripts\colorbox-master\content\daisy%402x.jpg" />
+    <Content Include="Static\scripts\colorbox-master\content\daisy.jpg" />
+    <Content Include="Static\scripts\colorbox-master\content\homer.jpg" />
+    <Content Include="Static\scripts\colorbox-master\content\marylou.jpg" />
+    <Content Include="Static\scripts\colorbox-master\content\ohoopee1.jpg" />
+    <Content Include="Static\scripts\colorbox-master\content\ohoopee2.jpg" />
+    <Content Include="Static\scripts\colorbox-master\content\ohoopee3.jpg" />
+    <Content Include="Static\scripts\colorbox-master\example1\colorbox.css" />
+    <Content Include="Static\scripts\colorbox-master\example1\images\border.png" />
+    <Content Include="Static\scripts\colorbox-master\example1\images\controls.png" />
+    <Content Include="Static\scripts\colorbox-master\example1\images\loading.gif" />
+    <Content Include="Static\scripts\colorbox-master\example1\images\loading_background.png" />
+    <Content Include="Static\scripts\colorbox-master\example1\images\overlay.png" />
+    <Content Include="Static\scripts\colorbox-master\example1\index.html" />
+    <Content Include="Static\scripts\colorbox-master\example2\colorbox.css" />
+    <Content Include="Static\scripts\colorbox-master\example2\images\controls.png" />
+    <Content Include="Static\scripts\colorbox-master\example2\images\loading.gif" />
+    <Content Include="Static\scripts\colorbox-master\example2\index.html" />
+    <Content Include="Static\scripts\colorbox-master\example3\colorbox.css" />
+    <Content Include="Static\scripts\colorbox-master\example3\images\controls.png" />
+    <Content Include="Static\scripts\colorbox-master\example3\images\loading.gif" />
+    <Content Include="Static\scripts\colorbox-master\example3\index.html" />
+    <Content Include="Static\scripts\colorbox-master\example4\colorbox.css" />
+    <Content Include="Static\scripts\colorbox-master\example4\images\border1.png" />
+    <Content Include="Static\scripts\colorbox-master\example4\images\border2.png" />
+    <Content Include="Static\scripts\colorbox-master\example4\images\loading.gif" />
+    <Content Include="Static\scripts\colorbox-master\example4\index.html" />
+    <Content Include="Static\scripts\colorbox-master\example5\colorbox.css" />
+    <Content Include="Static\css\images\border.png" />
+    <Content Include="Static\css\images\controls.png" />
+    <Content Include="Static\css\images\loading.gif" />
+    <Content Include="Static\css\images\loading_background.png" />
+    <Content Include="Static\scripts\colorbox-master\example5\index.html" />
+    <Content Include="Static\scripts\colorbox-master\i18n\jquery.colorbox-ar.js" />
+    <Content Include="Static\scripts\colorbox-master\i18n\jquery.colorbox-cs.js" />
+    <Content Include="Static\scripts\colorbox-master\i18n\jquery.colorbox-da.js" />
+    <Content Include="Static\scripts\colorbox-master\i18n\jquery.colorbox-de.js" />
+    <Content Include="Static\scripts\colorbox-master\i18n\jquery.colorbox-es.js" />
+    <Content Include="Static\scripts\colorbox-master\i18n\jquery.colorbox-fa.js" />
+    <Content Include="Static\scripts\colorbox-master\i18n\jquery.colorbox-fi.js" />
+    <Content Include="Static\scripts\colorbox-master\i18n\jquery.colorbox-fr.js" />
+    <Content Include="Static\scripts\colorbox-master\i18n\jquery.colorbox-hr.js" />
+    <Content Include="Static\scripts\colorbox-master\i18n\jquery.colorbox-hu.js" />
+    <Content Include="Static\scripts\colorbox-master\i18n\jquery.colorbox-it.js" />
+    <Content Include="Static\scripts\colorbox-master\i18n\jquery.colorbox-ja.js" />
+    <Content Include="Static\scripts\colorbox-master\i18n\jquery.colorbox-kr.js" />
+    <Content Include="Static\scripts\colorbox-master\i18n\jquery.colorbox-lv.js" />
+    <Content Include="Static\scripts\colorbox-master\i18n\jquery.colorbox-nl.js" />
+    <Content Include="Static\scripts\colorbox-master\i18n\jquery.colorbox-no.js" />
+    <Content Include="Static\scripts\colorbox-master\i18n\jquery.colorbox-pl.js" />
+    <Content Include="Static\scripts\colorbox-master\i18n\jquery.colorbox-pt-br.js" />
+    <Content Include="Static\scripts\colorbox-master\i18n\jquery.colorbox-ro.js" />
+    <Content Include="Static\scripts\colorbox-master\i18n\jquery.colorbox-ru.js" />
+    <Content Include="Static\scripts\colorbox-master\i18n\jquery.colorbox-sk.js" />
+    <Content Include="Static\scripts\colorbox-master\i18n\jquery.colorbox-tr.js" />
+    <Content Include="Static\scripts\colorbox-master\i18n\jquery.colorbox-zh-CN.js" />
+    <Content Include="Static\scripts\colorbox-master\jquery.colorbox-min.js" />
+    <Content Include="Static\scripts\colorbox-master\jquery.colorbox.js" />
+    <Content Include="Static\scripts\decision.js" />
+    <Content Include="Static\scripts\fancybox\blank.gif" />
+    <Content Include="Static\scripts\fancybox\fancybox_loading%402x.gif" />
+    <Content Include="Static\scripts\fancybox\fancybox_loading.gif" />
+    <Content Include="Static\scripts\fancybox\fancybox_overlay.png" />
+    <Content Include="Static\scripts\fancybox\fancybox_sprite%402x.png" />
+    <Content Include="Static\scripts\fancybox\fancybox_sprite.png" />
+    <Content Include="Static\scripts\fancybox\helpers\fancybox_buttons.png" />
+    <Content Include="Static\scripts\fancybox\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="Static\scripts\fancybox\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="Static\scripts\fancybox\helpers\jquery.fancybox-media.js" />
+    <Content Include="Static\scripts\fancybox\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="Static\scripts\fancybox\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="Static\scripts\fancybox\jquery.fancybox.css" />
+    <Content Include="Static\scripts\fancybox\jquery.fancybox.js" />
+    <Content Include="Static\scripts\fancybox\jquery.fancybox.pack.js" />
+    <Content Include="Static\scripts\fancybox\lib\jquery-1.10.1.min.js" />
+    <Content Include="Static\scripts\fancybox\lib\jquery-1.9.0.min.js" />
+    <Content Include="Static\scripts\fancybox\lib\jquery.mousewheel-3.0.6.pack.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -172,9 +254,15 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Index.html" />
+    <Content Include="Static\Index.html" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Static\scripts\colorbox-master\colorbox.ai" />
+    <Content Include="Static\scripts\colorbox-master\colorbox.jquery.json" />
+    <Content Include="Static\scripts\colorbox-master\component.json" />
+    <Content Include="Static\scripts\colorbox-master\i18n\jquery.colorbox-bg" />
+    <Content Include="Static\scripts\colorbox-master\README.md" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

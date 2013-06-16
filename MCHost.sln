@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCHost", "MCHost.csproj", "{5025529A-16B8-4169-A2AD-230C4FE4545D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCHost", "MCHost\MCHost.csproj", "{5025529A-16B8-4169-A2AD-230C4FE4545D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "..\WebApi\WebApi.csproj", "{CD59778C-EB60-4BBB-A39E-2539D67A2256}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{CD59778C-EB60-4BBB-A39E-2539D67A2256}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
