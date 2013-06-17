@@ -19,6 +19,7 @@ I'm sure there are more, but such is the nature of software development: uninten
 3) Environmental
 	a) It only works with a player logged into the minecraft server
 	b) If no player is logged in, it answers "YES" always.
-	c) Custom console application monitors C:\mcrestarted.txt file for changes and kills/restarts minecraft on the desktop (since it requires a GUI)
+	c) Custom console application monitors C:\mcrestarted.txt file for changes and kills/restarts minecraft on the desktop 
+	   (since it requires a GUI) -- If you see princess peach logged in, that's the automated client.
 4) Not my WTFs
 	a) When watching the minecraft server (via java) most "normal" messages come through STDERR, not STDOUT

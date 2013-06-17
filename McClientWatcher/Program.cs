@@ -39,7 +39,7 @@ namespace McClientWatcher
         private static void KillMinecraftProcesses()
         {
             // Kill any minecraft client apps.  They have a process name of "javaw",
-            // whereas the minecraft server uses a process name of "javaw.
+            // whereas the minecraft server uses a process name of "java".
             var procs = from proc in Process.GetProcesses()
                         where proc.ProcessName == "javaw"
                         select proc;
