@@ -8,7 +8,8 @@ I'm sure there are more, but such is the nature of software development: uninten
 	d) Using the windows registry to derive mime types (IndexController.cs:GetMimeType)
 	d) Custom threading in a web application -- Thread.Sleep, Process.Start (Global.asax.cs:ResetHost, McController.cs:MakeDecision)
 	e) Having a better solution than the "current" version commented out in the code (McController.cs:MakeDecision)
-	f) When the minecraft server has to be restarted, signals a desktop app to reload the client via C:\mcrestarted.txt. (Global.asax.cs:ResetHost)
+	f) Using "Yes" as a default answer when access to the RNG is denied. (McController.cs:MakeDecision)
+	g) When the minecraft server has to be restarted, signals McClientWatcher to reload the client via C:\mcrestarted.txt. (Global.asax.cs:ResetHost)
 2) Minecraft/Redstone
 	a) Non-enterprisey (but better) solution outside the containment area
 	b) Using weather to facilitate communication between the host -> minecraft
