@@ -22,5 +22,8 @@ I'm sure there are more, but such is the nature of software development: uninten
 	b) If no player is logged in, it answers "YES" always.
 	c) Custom console application monitors C:\mcrestarted.txt file for changes and kills/restarts minecraft on the desktop 
 	   (since it requires a GUI) -- If you see princess peach logged in, that's the automated client.
+	d) As a side-note, since we're using daylight sensors in the redstone, be assured that decisions are
+	   being made every 20 minutes, even if nobody is using the decision engine, as the day/night cycle 
+	   in minecraft is 20 minutes long.
 4) Not my WTFs
 	a) When watching the minecraft server (via java) most "normal" messages come through STDERR, not STDOUT
