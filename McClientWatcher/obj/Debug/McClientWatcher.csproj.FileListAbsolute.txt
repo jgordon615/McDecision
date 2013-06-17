@@ -1,0 +1,5 @@
+D:\Projects\McDecision\McClientWatcher\bin\Debug\McClientWatcher.exe.config
+D:\Projects\McDecision\McClientWatcher\bin\Debug\McClientWatcher.exe
+D:\Projects\McDecision\McClientWatcher\bin\Debug\McClientWatcher.pdb
+D:\Projects\McDecision\McClientWatcher\obj\Debug\McClientWatcher.exe
+D:\Projects\McDecision\McClientWatcher\obj\Debug\McClientWatcher.pdb

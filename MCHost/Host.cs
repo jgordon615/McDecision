@@ -13,7 +13,6 @@ namespace MCHost
     public class Host : IDisposable
     {
         private Process _hostProcess;
-        //private Process _clientProcess;
 
         public event EventHandler<bool> DecisionMade;
 
@@ -39,20 +38,9 @@ namespace MCHost
 
             _hostProcess.ErrorDataReceived += _process_ErrorDataReceived;
             _hostProcess.BeginErrorReadLine();
-
-            Thread.Sleep(2000);
-
-            //pi = new ProcessStartInfo();
-            //pi.FileName = ConfigurationManager.AppSettings["MinecraftExePath"];
-            //pi.Arguments = ConfigurationManager.AppSettings["MinecraftExeArguments"];
-            //pi.UseShellExecute = true;
-            //pi.LoadUserProfile = true;
-
-            //_clientProcess = Process.Start(pi);
         }
 
         public int HostProcessId { get { return _hostProcess.Id; } }
-        //public int ClientProcessId { get { return _clientProcess.Id; } }
 
         public bool HasExited { get { return _hostProcess == null || _hostProcess.HasExited; } }
 
@@ -120,19 +108,12 @@ namespace MCHost
         /// </summary>
         public void Dispose()
         {
-            //if (_clientProcess != null)
-            //{
-            //    _clientProcess.Kill();
-            //    _clientProcess = null;
-            //}
-
             if (_hostProcess != null)
             {
                 _hostProcess.StandardInput.Write("/stop\n");
                 _hostProcess.OutputDataReceived -= _process_OutputDataReceived;
                 _hostProcess.ErrorDataReceived -= _process_ErrorDataReceived;
 
-                Thread.Sleep(4000);
                 _hostProcess.Kill();
 
                 _hostProcess = null;

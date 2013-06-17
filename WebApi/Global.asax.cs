@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using MCHost;
 using Newtonsoft.Json.Serialization;
 using System.Diagnostics;
+using System.IO;
 
 namespace WebApi
 {
@@ -29,12 +30,26 @@ namespace WebApi
             Host host = (Host)HttpContext.Current.Application["host"];
             if (host != null)
                 host.Dispose();
-
             HttpContext.Current.Application.Remove("host");
 
+
+            // Kill any remaining minecraft server apps.  They have a process name of "java",
+            // whereas the minecraft client uses a process name of "javaw".
+            var procs = from proc in Process.GetProcesses()
+                        where proc.ProcessName == "java"
+                        select proc;
+
+            foreach (var proc in procs)
+            {
+                proc.Kill();
+            }
+
             host = new Host();
+            if (File.Exists("C:\\mcstarted.txt"))
+                File.Delete("C:\\mcstarted.txt");
+            File.WriteAllText("C:\\mcstarted.txt", DateTime.Now.ToString());
+
             _hostPids.Add(host.HostProcessId);
-            //_hostPids.Add(host.ClientProcessId);
 
             // Save a reference to our minecraft host in Application state so we can reference
             // it when we need to make decisions.
