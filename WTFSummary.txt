@@ -3,13 +3,20 @@ I'm sure there are more, but such is the nature of software development: uninten
 
 1) The Web Host
 	a) Activating the Minecraft server from within IIS itself (Global.asax.cs:ResetHost)
-	b) Sharing the reference for the process using the Application variable (Global.asax.cs:ResetHost, McController.cs:MakeDecision)
+	b) Sharing the reference for the process using the Application variable (Global.asax.cs:ResetHost, 
+	   McController.cs:MakeDecision)
 	c) Using a custom-written controller to handle static file content (IndexController.cs)
 	d) Using the windows registry to derive mime types (IndexController.cs:GetMimeType)
-	d) Custom threading in a web application -- Thread.Sleep, Process.Start (Global.asax.cs:ResetHost, McController.cs:MakeDecision)
-	e) Having a better solution than the "current" version commented out in the code (McController.cs:MakeDecision)
+	d) Custom threading in a web application -- Thread.Sleep, Process.Start (Global.asax.cs:ResetHost, 
+	   McController.cs:MakeDecision)
+	e) Having a better solution than the "current" version commented out in the code 
+	   (McController.cs:MakeDecision)
 	f) Using "Yes" as a default answer when access to the RNG is denied. (McController.cs:MakeDecision)
-	g) When the minecraft server has to be restarted, signals McClientWatcher to reload the client via C:\mcrestarted.txt. (Global.asax.cs:ResetHost)
+	g) When the minecraft server has to be restarted, signals McClientWatcher to reload the client via 
+	   C:\mcrestarted.txt. (Global.asax.cs:ResetHost)
+	h) This is vulnerable to race conditions, as the "listener" is indiscriminate about which response it's 
+	   reading.  If two clients make requests very close to one another, both clients will receive the same 
+	   response.
 2) Minecraft/Redstone
 	a) Non-enterprisey (but better) solution outside the containment area
 	b) Using weather to facilitate communication between the host -> minecraft
@@ -20,8 +27,9 @@ I'm sure there are more, but such is the nature of software development: uninten
 3) Environmental
 	a) It only works with a player logged into the minecraft server
 	b) If no player is logged in, it answers "YES" always.
-	c) Custom console application monitors C:\mcrestarted.txt file for changes and kills/restarts minecraft on the desktop 
-	   (since it requires a GUI) -- If you see princess peach logged in, that's the automated client.
+	c) Custom console application monitors C:\mcrestarted.txt file for changes and kills/restarts minecraft 
+	   on the desktop (since it requires a GUI) -- If you see princess peach logged in, that's the automated 
+	   client.
 	d) As a side-note, since we're using daylight sensors in the redstone, be assured that decisions are
 	   being made every 20 minutes, even if nobody is using the decision engine, as the day/night cycle 
 	   in minecraft is 20 minutes long.
