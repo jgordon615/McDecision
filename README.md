@@ -1,6 +1,16 @@
 McDecision
 ==========
 
+Online for the contest only.  This is not permanent hosting :)
+
+Hosted Web Server:  http://mc.gordon-online.com
+Hosted Minecraft Server:  mc.gordon-online.com:25545
+
+
+Description
+===========
+
+
 Decision engine written in Minecraft
 
 This project was written for the OMGWTF2 contest.  It is a shout-out to all the nephews who write "enterprise"
