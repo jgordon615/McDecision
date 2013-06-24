@@ -218,24 +218,6 @@
     <Content Include="Static\scripts\colorbox-master\jquery.colorbox-min.js" />
     <Content Include="Static\scripts\colorbox-master\jquery.colorbox.js" />
     <Content Include="Static\scripts\decision.js" />
-    <Content Include="Static\scripts\fancybox\blank.gif" />
-    <Content Include="Static\scripts\fancybox\fancybox_loading%402x.gif" />
-    <Content Include="Static\scripts\fancybox\fancybox_loading.gif" />
-    <Content Include="Static\scripts\fancybox\fancybox_overlay.png" />
-    <Content Include="Static\scripts\fancybox\fancybox_sprite%402x.png" />
-    <Content Include="Static\scripts\fancybox\fancybox_sprite.png" />
-    <Content Include="Static\scripts\fancybox\helpers\fancybox_buttons.png" />
-    <Content Include="Static\scripts\fancybox\helpers\jquery.fancybox-buttons.css" />
-    <Content Include="Static\scripts\fancybox\helpers\jquery.fancybox-buttons.js" />
-    <Content Include="Static\scripts\fancybox\helpers\jquery.fancybox-media.js" />
-    <Content Include="Static\scripts\fancybox\helpers\jquery.fancybox-thumbs.css" />
-    <Content Include="Static\scripts\fancybox\helpers\jquery.fancybox-thumbs.js" />
-    <Content Include="Static\scripts\fancybox\jquery.fancybox.css" />
-    <Content Include="Static\scripts\fancybox\jquery.fancybox.js" />
-    <Content Include="Static\scripts\fancybox\jquery.fancybox.pack.js" />
-    <Content Include="Static\scripts\fancybox\lib\jquery-1.10.1.min.js" />
-    <Content Include="Static\scripts\fancybox\lib\jquery-1.9.0.min.js" />
-    <Content Include="Static\scripts\fancybox\lib\jquery.mousewheel-3.0.6.pack.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
