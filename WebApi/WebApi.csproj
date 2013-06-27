@@ -156,8 +156,29 @@
     <Content Include="Global.asax" />
     <Content Include="Static\css\colorbox.css" />
     <Content Include="Static\css\decision.css" />
+    <Content Include="Static\fonts\droid\droid_sans_bold.typeface.js" />
+    <Content Include="Static\fonts\droid\droid_sans_mono_regular.typeface.js" />
+    <Content Include="Static\fonts\droid\droid_sans_regular.typeface.js" />
+    <Content Include="Static\fonts\droid\droid_serif_bold.typeface.js" />
+    <Content Include="Static\fonts\droid\droid_serif_regular.typeface.js" />
+    <Content Include="Static\fonts\droid\README.txt" />
+    <Content Include="Static\fonts\gentilis_bold.typeface.js" />
+    <Content Include="Static\fonts\gentilis_regular.typeface.js" />
+    <Content Include="Static\fonts\helvetiker_bold.typeface.js" />
+    <Content Include="Static\fonts\helvetiker_regular.typeface.js" />
+    <Content Include="Static\fonts\optimer_bold.typeface.js" />
+    <Content Include="Static\fonts\optimer_regular.typeface.js" />
     <Content Include="Static\images\no.png" />
     <Content Include="Static\images\yes.png" />
+    <Content Include="Static\render\McDecision3-Alpha.png" />
+    <Content Include="Static\render\McDecision3-RGB.png" />
+    <Content Include="Static\render\McDecision3-RGBA.png" />
+    <Content Include="Static\render\skybox\neg-x.png" />
+    <Content Include="Static\render\skybox\neg-y.png" />
+    <Content Include="Static\render\skybox\neg-z.png" />
+    <Content Include="Static\render\skybox\pos-x.png" />
+    <Content Include="Static\render\skybox\pos-y.png" />
+    <Content Include="Static\render\skybox\pos-z.png" />
     <Content Include="Static\scripts\async.js" />
     <Content Include="Static\scripts\mc3d.js" />
     <Content Include="Static\scripts\colorbox-master\content\ajax.html" />
@@ -221,10 +242,20 @@
     <Content Include="Static\scripts\colorbox-master\jquery.colorbox.js" />
     <Content Include="Static\scripts\decision.js" />
     <Content Include="Static\scripts\loaders\OBJLoader.js" />
+    <Content Include="Static\scripts\controls\OrbitControls.js" />
+    <Content Include="Static\scripts\postprocessing\BloomPass.js" />
+    <Content Include="Static\scripts\postprocessing\EffectComposer.js" />
+    <Content Include="Static\scripts\postprocessing\FilmPass.js" />
+    <Content Include="Static\scripts\postprocessing\MaskPass.js" />
+    <Content Include="Static\scripts\postprocessing\RenderPass.js" />
+    <Content Include="Static\scripts\postprocessing\ShaderPass.js" />
+    <Content Include="Static\scripts\shaders\ConvolutionShader.js" />
+    <Content Include="Static\scripts\shaders\CopyShader.js" />
+    <Content Include="Static\scripts\shaders\FilmShader.js" />
+    <Content Include="Static\scripts\shaders\FXAAShader.js" />
+    <Content Include="Static\scripts\three.js" />
     <Content Include="Static\scripts\three.min.js" />
-    <Content Include="Static\textures\McDecision-Alpha.png" />
-    <Content Include="Static\textures\McDecision-RGB.png" />
-    <Content Include="Static\textures\McDecision-RGBA.png" />
+    <Content Include="Static\scripts\controls\TrackballControls.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -253,8 +284,12 @@
     <Content Include="Static\scripts\colorbox-master\README.md" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Static\render\McDecision.mtl" />
-    <Content Include="Static\render\McDecision.obj" />
+    <Content Include="Static\render\McDecision3.mtl" />
+    <Content Include="Static\render\McDecision3.obj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Static\fonts\droid\NOTICE" />
+    <Content Include="Static\fonts\LICENSE" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

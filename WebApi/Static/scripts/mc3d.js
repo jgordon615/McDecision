@@ -35,7 +35,7 @@ function init3d() {
     // Disable panning.  It doesn't work right for us.
     controls.userPanSpeed = 0.0;
 
-    var ambientLight = new THREE.AmbientLight(0x999999);
+    var ambientLight = new THREE.AmbientLight(0xcccccc);
     scene.add(ambientLight);
 
     var renderer = new THREE.WebGLRenderer();
@@ -43,7 +43,7 @@ function init3d() {
 
     document.body.appendChild(renderer.domElement);
     window.addEventListener('resize', onWindowResize, false);
-
+    window.addEventListener('keydown', onKeyPress, false);
     var skybox = addSkybox(scene, render);
     //addGuideLines(scene);
     addMinecraftModel(structure, render);
@@ -79,6 +79,11 @@ function init3d() {
     return result;
 }
 
+function onKeyPress(event) {
+    if (event.keyCode === 27) {
+        $('#controls').hide();
+    }
+}
 
 function addTextToScene(text, scene) {
     function createText() {
