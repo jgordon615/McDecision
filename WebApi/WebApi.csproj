@@ -158,6 +158,8 @@
     <Content Include="Static\css\decision.css" />
     <Content Include="Static\images\no.png" />
     <Content Include="Static\images\yes.png" />
+    <Content Include="Static\scripts\async.js" />
+    <Content Include="Static\scripts\mc3d.js" />
     <Content Include="Static\scripts\colorbox-master\content\ajax.html" />
     <Content Include="Static\scripts\colorbox-master\content\daisy%402x.jpg" />
     <Content Include="Static\scripts\colorbox-master\content\daisy.jpg" />
@@ -218,6 +220,11 @@
     <Content Include="Static\scripts\colorbox-master\jquery.colorbox-min.js" />
     <Content Include="Static\scripts\colorbox-master\jquery.colorbox.js" />
     <Content Include="Static\scripts\decision.js" />
+    <Content Include="Static\scripts\loaders\OBJLoader.js" />
+    <Content Include="Static\scripts\three.min.js" />
+    <Content Include="Static\textures\McDecision-Alpha.png" />
+    <Content Include="Static\textures\McDecision-RGB.png" />
+    <Content Include="Static\textures\McDecision-RGBA.png" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -244,6 +251,10 @@
     <Content Include="Static\scripts\colorbox-master\component.json" />
     <Content Include="Static\scripts\colorbox-master\i18n\jquery.colorbox-bg" />
     <Content Include="Static\scripts\colorbox-master\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Static\render\McDecision.mtl" />
+    <Content Include="Static\render\McDecision.obj" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

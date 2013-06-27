@@ -6,6 +6,8 @@
 }
 
 $(document).ready(function () {
+    init3d();
+
     $(".button").click(function () {
         var loader = $.colorbox({
             html: "<div style='text-align:center; padding: 50px;'><h1>Steve is deciding!</h1></div>",
