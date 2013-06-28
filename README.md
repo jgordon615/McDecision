@@ -41,17 +41,19 @@ The MVC process sends the resulting decision back to the caller.
 
 
 
-This entire process is wrapped up in a little AJAX web page that asks for a decision on a button click and displays a
-picture of steve saying "yes" or "no", with a background of my first screenshot trying to get all the interoperability
-working...
+This entire process is wrapped up in a nice, but useless, 3D rendered (WebGL/Three.js) web page that shows a render of
+the minecraft world that's running the RNG logic.  Please use Chrome to view the web page.  It uses AJAX to
+communicate with the MVC 4 services.
 
 
-I am hosting both the web application and the minecraft server locally, accessible to the internet; though I prefer to 
-limit who I give the IP address to :)  Judges are welcome, and if you don't have a minecraft account (so you can see
-the action) I have a spare one you can borrow.
+I am hosting both the web application and the minecraft server locally, accessible to the internet for the duration of
+the contest.  Judges are welcome, and if you don't have a minecraft account (so you can see the action) I have a spare
+one you can borrow.
 
 (The system requires a user be logged into the server whenever decisions are requested.  Otherwise the redstone won't
-run and the whole thing will time out (default timeout response is "YES"))
+run and the whole thing will time out (default timeout response is "YES")).  To address this, I have a local process
+that keeps a minecraft client up and running, connected to the server.  It detects when the server is restarted, and
+restarts the client after a server restart.
 
 
 
