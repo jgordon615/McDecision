@@ -55,7 +55,7 @@ namespace McClientWatcher
             var psi = new ProcessStartInfo();
             psi.WorkingDirectory = "D:\\Minecraft";
             psi.FileName = "minecraft.exe";
-            psi.Arguments = "shortstack615 ricky123 mc.gordon-online.com:25545";
+            psi.Arguments = "UseYourOwn password mcserver:25545";
             Process.Start(psi);
         }
     }
