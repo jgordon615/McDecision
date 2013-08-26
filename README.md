@@ -1,11 +1,7 @@
 McDecision
 ==========
 
-Online for the contest only.  This is not permanent hosting :)
-
-Hosted Web Server:  http://mc.gordon-online.com
-
-Hosted Minecraft Server:  mc.gordon-online.com:25545
+The contest is over!  Host it yourself :)
 
 
 Description
